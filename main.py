@@ -10,7 +10,7 @@ def detect_file_text() -> None:
     client = boto3.client("textract")
 
     # pega o path do arquivo
-    file_path = str(Path(__file__) / "images" / "lista-material-escolar.jpeg")
+    file_path = str(Path(__file__).parent / "images" / "lista-material-escolar.jpeg")
     with open(file_path, "rb") as file:
         document_bytes = file.read()
     try:
